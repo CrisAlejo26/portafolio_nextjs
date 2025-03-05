@@ -1,27 +1,225 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+@custom-variant dark (&:is(.dark *));
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+
+
+
+@layer base {
+	:root {
+		/* Fondos y textos generales */
+		--background: #ffffff;
+		/* blanco */
+		--foreground: #1a1a1a;
+		/* texto oscuro */
+
+		/* Tarjetas y popovers */
+		--card: #ffffff;
+		--card-foreground: #1a1a1a;
+		--popover: #ffffff;
+		--popover-foreground: #1a1a1a;
+
+		/* Colores principales (inspirados en tonos púrpura/magenta) */
+		--primary: #844ef2;
+		/* púrpura */
+		--primary-foreground: #bb79fd;
+		--secondary: #E100FF;
+		/* magenta */
+		--secondary-foreground: #ffffff;
+		--accent: #7F00FF;
+		--accent-foreground: #ffffff;
+
+		/* Estados y elementos auxiliares */
+		--muted: #f3f4f6;
+		/* gris muy claro */
+		--muted-foreground: #6b7280;
+		/* gris medio */
+		--destructive: #DC2626;
+		/* rojo para acciones destructivas */
+		--destructive-foreground: #ffffff;
+
+		/* Bordes, inputs y anillos */
+		--border: #e5e7eb;
+		/* gris claro */
+		--input: #e5e7eb;
+		--ring: #7F00FF;
+
+		/* Gradiente principal para fondos o botones destacados */
+		--gradient-primary: linear-gradient(135deg, #7F00FF, #E100FF);
+
+		/* Configuración para elementos secundarios (ej. sidebar) */
+		--sidebar: #7F00FF;
+		--sidebar-foreground: #ffffff;
+		--sidebar-primary: #7F00FF;
+		--sidebar-primary-foreground: #ffffff;
+		--sidebar-accent: #E100FF;
+		--sidebar-accent-foreground: #ffffff;
+		--sidebar-border: #e5e7eb;
+		--sidebar-ring: #7F00FF;
+
+		/* Radios para bordes redondeados */
+		--radius: 0.625rem;
+	}
+
+	.dark {
+		--background: #1a1a1a;
+		/* fondo oscuro */
+		--foreground: #ffffff;
+		/* texto blanco */
+
+		--card: #1a1a1a;
+		--card-foreground: #ffffff;
+		--popover: #1a1a1a;
+		--popover-foreground: #ffffff;
+
+		/* En modo oscuro, invertimos algunos colores principales */
+		--primary: #ffffff;
+		--primary-foreground: #7F00FF;
+		--secondary: #cccccc;
+		--secondary-foreground: #ffffff;
+		--accent: #ffffff;
+		--accent-foreground: #7F00FF;
+
+		--muted: #333333;
+		--muted-foreground: #bbbbbb;
+		--destructive: #ff7b7b;
+		--destructive-foreground: #1a1a1a;
+
+		--border: #444444;
+		--input: #444444;
+		--ring: #ffffff;
+
+		/* Mantenemos el mismo gradiente (puedes ajustarlo si lo deseas) */
+		--gradient-primary: linear-gradient(135deg, #7F00FF, #E100FF);
+
+		--sidebar: #1a1a1a;
+		--sidebar-foreground: #ffffff;
+		--sidebar-primary: #7F00FF;
+		--sidebar-primary-foreground: #ffffff;
+		--sidebar-accent: #E100FF;
+		--sidebar-accent-foreground: #ffffff;
+		--sidebar-border: #444444;
+		--sidebar-ring: #ffffff;
+	}
+}
+
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+
+	body {
+		@apply bg-background text-foreground;
+	}
+}
+
+.btn-gradient {
+	background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)
+}
+
+.btn-gradient {
+	margin: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;
+	box-shadow: 0 0 20px #eee;
+	border-radius: 10px;
+	display: block;
+}
+
+.btn-gradient:hover {
+	background-position: right center;
+	/* change the direction of the change here */
+	color: #fff;
+	text-decoration: none;
+}
+
+.cube {
+	position: absolute;
+	top: 80vh;
+	left: 45vw;
+	width: 10px;
+	height: 10px;
+	border: solid 1px #003298;
+	transform-origin: top left;
+	transform: scale(0) rotate(0deg) translate(-50%, -50%);
+	animation: cube 12s ease-in forwards infinite;
+}
+
+.cube:nth-child(2n) {
+	border-color: #0051f4;
+}
+
+.cube:nth-child(2) {
+	animation-delay: 2s;
+	left: 25vw;
+	top: 40vh;
+}
+
+.cube:nth-child(3) {
+	animation-delay: 4s;
+	left: 75vw;
+	top: 50vh;
+}
+
+.cube:nth-child(4) {
+	animation-delay: 6s;
+	left: 90vw;
+	top: 10vh;
+}
+
+.cube:nth-child(5) {
+	animation-delay: 8s;
+	left: 10vw;
+	top: 85vh;
+}
+
+.cube:nth-child(6) {
+	animation-delay: 10s;
+	left: 50vw;
+	top: 10vh;
+}
+
+@keyframes cube {
+	from {
+		transform: scale(0) rotate(0deg) translate(-50%, -50%);
+		opacity: 1;
+	}
+
+	to {
+		transform: scale(20) rotate(960deg) translate(-50%, -50%);
+		opacity: 0;
+	}
+}
+
+/* Boton con efecto de hover */
+
+/* Estilos para la variante icon */
+.btn-icon {
+	position: relative;
+	overflow: hidden;
+}
+
+.btn-icon::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: rgba(138, 43, 226, 0.2);
+	/* Tono violeta semitransparente */
+	transform: scale(0);
+	transition: transform 0.3s ease-in-out;
+	z-index: -1;
+}
+
+.btn-icon:hover::before {
+	transform: scale(1);
 }
