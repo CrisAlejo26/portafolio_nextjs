@@ -12,10 +12,10 @@ export default function Navbar() {
 	const isMobile = useIsMobile();
 
 	return (
-		<header className="fixed top-0 left-0 w-full z-30 bg-background dark:bg-background/90 backdrop-blur-sm shadow-lg">
+		<header className="fixed top-0 left-0 w-full z-30 bg-backgroundNavbar backdrop-blur-sm shadow-lg">
 			<div className="container mx-auto py-2 flex items-center justify-between">
 				{/* Logo o marca */}
-				<div className="font-bold text-primary dark:text-primary">
+				<div className="font-bold text-primary dark:text-secondary-foreground">
 					<Link
 						href="/"
 						className="text-xl md:text-2xl items-center flex hover:text-blue-400 transition-all duration-300">

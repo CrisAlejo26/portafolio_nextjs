@@ -12,7 +12,7 @@ export function HamburgerButton({ isOpen, toggle }: HamburgerButtonProps) {
 			aria-label="Abrir menú"
 			aria-expanded={isOpen}
 			onClick={toggle}
-			className="text-2xl dark:text-foreground focus:outline-none xl:hidden pr-4">
+			className="text-2xl focus:outline-none xl:hidden pr-4 dark:bg-violet-900">
 			{isOpen ? <FiX /> : <FiMenu />}
 		</Button>
 	);

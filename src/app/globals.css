@@ -11,104 +11,6 @@
 
 
 
-@layer base {
-	:root {
-		/* Fondos y textos generales */
-		--background: #ffffff;
-		/* blanco */
-		--foreground: #1a1a1a;
-		/* texto oscuro */
-
-		/* Tarjetas y popovers */
-		--card: #ffffff;
-		--card-foreground: #1a1a1a;
-		--popover: #ffffff;
-		--popover-foreground: #1a1a1a;
-
-		/* Colores principales (inspirados en tonos púrpura/magenta) */
-		--primary: #844ef2;
-		/* púrpura */
-		--primary-foreground: #bb79fd;
-		--secondary: #E100FF;
-		/* magenta */
-		--secondary-foreground: #ffffff;
-		--accent: #7F00FF;
-		--accent-foreground: #ffffff;
-
-		/* Estados y elementos auxiliares */
-		--muted: #f3f4f6;
-		/* gris muy claro */
-		--muted-foreground: #6b7280;
-		/* gris medio */
-		--destructive: #DC2626;
-		/* rojo para acciones destructivas */
-		--destructive-foreground: #ffffff;
-
-		/* Bordes, inputs y anillos */
-		--border: #e5e7eb;
-		/* gris claro */
-		--input: #e5e7eb;
-		--ring: #7F00FF;
-
-		/* Gradiente principal para fondos o botones destacados */
-		--gradient-primary: linear-gradient(135deg, #7F00FF, #E100FF);
-
-		/* Configuración para elementos secundarios (ej. sidebar) */
-		--sidebar: #7F00FF;
-		--sidebar-foreground: #ffffff;
-		--sidebar-primary: #7F00FF;
-		--sidebar-primary-foreground: #ffffff;
-		--sidebar-accent: #E100FF;
-		--sidebar-accent-foreground: #ffffff;
-		--sidebar-border: #e5e7eb;
-		--sidebar-ring: #7F00FF;
-
-		/* Radios para bordes redondeados */
-		--radius: 0.625rem;
-	}
-
-	.dark {
-		--background: #1a1a1a;
-		/* fondo oscuro */
-		--foreground: #ffffff;
-		/* texto blanco */
-
-		--card: #1a1a1a;
-		--card-foreground: #ffffff;
-		--popover: #1a1a1a;
-		--popover-foreground: #ffffff;
-
-		/* En modo oscuro, invertimos algunos colores principales */
-		--primary: #ffffff;
-		--primary-foreground: #7F00FF;
-		--secondary: #cccccc;
-		--secondary-foreground: #ffffff;
-		--accent: #ffffff;
-		--accent-foreground: #7F00FF;
-
-		--muted: #333333;
-		--muted-foreground: #bbbbbb;
-		--destructive: #ff7b7b;
-		--destructive-foreground: #1a1a1a;
-
-		--border: #444444;
-		--input: #444444;
-		--ring: #ffffff;
-
-		/* Mantenemos el mismo gradiente (puedes ajustarlo si lo deseas) */
-		--gradient-primary: linear-gradient(135deg, #7F00FF, #E100FF);
-
-		--sidebar: #1a1a1a;
-		--sidebar-foreground: #ffffff;
-		--sidebar-primary: #7F00FF;
-		--sidebar-primary-foreground: #ffffff;
-		--sidebar-accent: #E100FF;
-		--sidebar-accent-foreground: #ffffff;
-		--sidebar-border: #444444;
-		--sidebar-ring: #ffffff;
-	}
-}
-
 
 @layer base {
 	* {
@@ -131,7 +33,6 @@
 	transition: 0.5s;
 	background-size: 200% auto;
 	color: white;
-	box-shadow: 0 0 20px #eee;
 	border-radius: 10px;
 	display: block;
 }
@@ -200,8 +101,6 @@
 		opacity: 0;
 	}
 }
-
-/* Boton con efecto de hover */
 
 /* Estilos para la variante icon */
 .btn-icon {

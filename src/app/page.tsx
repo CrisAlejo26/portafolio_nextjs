@@ -9,9 +9,9 @@ const Navbar = dynamic(() => import('../components').then(module => ({ default: 
 
 export default function Home() {
 	return (
-		<>
+		<section className="">
 			<Navbar />
 			<Header />
-		</>
+		</section>
 	);
 }

@@ -1,4 +1,5 @@
 export { Button, buttonVariants } from './Button';
+export { ThemeToggleButton } from './ThemeToggleButton';
 export {
 	DropdownMenu,
 	DropdownMenuPortal,

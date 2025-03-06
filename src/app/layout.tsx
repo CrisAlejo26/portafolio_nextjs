@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import { ThemeProvider, ThemeToggleButton } from '@/components';
 import './globals.css';
-import { ThemeProvider } from '@/components';
 
 const geistSans = localFont({
 	src: './fonts/GeistVF.woff',
@@ -67,14 +67,19 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="es" suppressHydrationWarning>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+		<html
+			lang="es"
+			suppressHydrationWarning
+			className="overflow-y-scroll scrollbar scrollbar-thumb-sky-700">
+			<body
+				className={`${geistSans.variable} ${geistMono.variable} antialiased scrollbar-thin`}>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"
 					enableSystem
 					disableTransitionOnChange>
 					{children}
+					<ThemeToggleButton />
 				</ThemeProvider>
 			</body>
 		</html>

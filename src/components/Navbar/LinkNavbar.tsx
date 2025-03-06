@@ -39,7 +39,7 @@ export const LinkNavbar = () => {
 				<li key={`${link}-${index}`}>
 					<Link
 						href={link.href}
-						className="text-foreground dark:text-foreground transition duration-300 hover:text-primary-foreground dark:hover:text-primary-foreground font-bold">
+						className="text-foreground dark:text-secondary-foreground transition duration-300 hover:text-primary-foreground dark:hover:text-primary-foreground font-bold">
 						{link.label}
 					</Link>
 				</li>
