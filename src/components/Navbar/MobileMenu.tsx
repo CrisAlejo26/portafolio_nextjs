@@ -16,7 +16,7 @@ export function MobileMenu({ isOpen }: MobileMenuProps) {
 					<Button
 						variant="gradient"
 						rounded="full"
-						className="w-full"
+						className="w-full dark:dark-btn-gradient"
 						aria-label="Ir a contactar al desarrollador">
 						¡Hablame!
 					</Button>

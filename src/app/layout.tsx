@@ -70,12 +70,11 @@ export default function RootLayout({
 		<html
 			lang="es"
 			suppressHydrationWarning
-			className="overflow-y-scroll scrollbar scrollbar-thumb-sky-700">
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased scrollbar-thin`}>
+			className="overflow-y-scroll scrollbar-thin scrollbar-thumb-sky-700 scrollbar-track-sky-400 dark:scrollbar-thumb-blue-950 dark:scrollbar-track-blue-700">
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 				<ThemeProvider
 					attribute="class"
-					defaultTheme="system"
+					defaultTheme="light"
 					enableSystem
 					disableTransitionOnChange>
 					{children}

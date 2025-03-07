@@ -7,10 +7,8 @@
 	.text-balance {
 		text-wrap: balance;
 	}
+
 }
-
-
-
 
 @layer base {
 	* {
@@ -22,7 +20,21 @@
 	}
 }
 
+
+
+.dark .btn-gradient {
+	background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)
+}
+
 .btn-gradient {
+	background-image: linear-gradient(to right, #854ff3 0%, #182848 51%, #4b6cb7 100%);
+}
+
+.custom-text-gradient {
+	background-image: linear-gradient(to right, #854ff3 0%, #182848 51%, #4b6cb7 100%);
+}
+
+.dark .custom-text-gradient {
 	background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)
 }
 

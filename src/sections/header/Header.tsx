@@ -1,5 +1,10 @@
-import { BackgroundHeaderLayout } from '@/layouts';
 import dynamic from 'next/dynamic';
+const BackgroundHeaderLayout = dynamic(
+	() => import('../../layouts').then(module => ({ default: module.BackgroundHeaderLayout })),
+	{
+		loading: () => <p>Cargando...</p>,
+	},
+);
 const Text = dynamic(
 	() => import('../../components/Header').then(module => ({ default: module.Text })),
 	{

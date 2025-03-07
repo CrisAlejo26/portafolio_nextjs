@@ -6,6 +6,7 @@ const config: Config = {
 	theme: {
 		extend: {
 			colors: {
+				// Modo claro (tal como lo tienes)
 				background: 'hsl(0, 0%, 100%)', // #ffffff
 				foreground: 'hsl(0, 0%, 10%)', // #1a1a1a
 				card: {
@@ -49,6 +50,50 @@ const config: Config = {
 					border: 'hsl(210, 16%, 92%)', // #e5e7eb
 					ring: 'hsl(270, 100%, 50%)', // #7F00FF
 				},
+				// Modo oscuro con tonos azules
+				dark: {
+					// Fondo principal en un azul muy oscuro (casi negro)
+					background: 'hsl(220, 20%, 10%)',
+					// Texto y elementos principales en tonos claros azules
+					foreground: 'hsl(210, 50%, 90%)',
+
+					// Tarjetas y popovers con fondo ligeramente más claro
+					card: {
+						DEFAULT: 'hsl(220, 20%, 15%)',
+						foreground: 'hsl(210, 50%, 90%)',
+					},
+					popover: {
+						DEFAULT: 'hsl(220, 20%, 15%)',
+						foreground: 'hsl(210, 50%, 90%)',
+					},
+					// Colores primarios en azul con buena saturación
+					primary: {
+						DEFAULT: 'hsl(215, 80%, 50%)',
+						foreground: 'hsl(210, 50%, 95%)',
+					},
+					secondary: {
+						DEFAULT: 'hsl(220, 70%, 50%)',
+						foreground: 'hsl(210, 50%, 95%)',
+					},
+					accent: {
+						DEFAULT: 'hsl(225, 90%, 55%)',
+						foreground: 'hsl(210, 50%, 95%)',
+					},
+					// Colores "muted" para elementos secundarios o fondos de secciones
+					muted: {
+						DEFAULT: 'hsl(210, 20%, 25%)',
+						foreground: 'hsl(210, 15%, 60%)',
+					},
+					// Mantengo el color destructivo en rojo para resaltar acciones negativas
+					destructive: {
+						DEFAULT: 'hsl(0, 82%, 53%)',
+						foreground: 'hsl(0, 0%, 100%)',
+					},
+					// Bordes, inputs y anillos en tonos oscuros
+					border: 'hsl(210, 20%, 30%)',
+					input: 'hsl(210, 20%, 30%)',
+					ring: 'hsl(225, 90%, 55%)',
+				},
 			},
 			borderRadius: {
 				lg: '0.625rem',
@@ -58,6 +103,6 @@ const config: Config = {
 		},
 	},
 	/* eslint-disable-next-line @typescript-eslint/no-require-imports */
-	plugins: [require('tailwindcss-animate')],
+	plugins: [require('tailwindcss-animate'), require('tailwind-scrollbar')],
 };
 export default config;

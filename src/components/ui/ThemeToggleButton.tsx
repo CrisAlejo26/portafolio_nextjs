@@ -16,6 +16,7 @@ export function ThemeToggleButton() {
 	return (
 		<section className="fixed top-1/2 -translate-y-1/2 right-0 z-50">
 			<Button
+				aria-label="Cambiar de a modo oscuro o claro"
 				onClick={handleToggle}
 				className=" group relative flex items-center justify-center h-12 w-12 gradient text-white rounded-l-full overflow-hidden transition-all duration-300 hover:w-32
         ">

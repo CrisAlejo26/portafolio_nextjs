@@ -6,12 +6,19 @@ const Header = dynamic(() => import('../sections').then(module => ({ default: mo
 const Navbar = dynamic(() => import('../components').then(module => ({ default: module.Navbar })), {
 	loading: () => <p>Cargando...</p>,
 });
+const Services = dynamic(
+	() => import('../sections').then(module => ({ default: module.Services })),
+	{
+		loading: () => <p>Cargando...</p>,
+	},
+);
 
 export default function Home() {
 	return (
-		<section className="">
+		<section>
 			<Navbar />
 			<Header />
+			<Services />
 		</section>
 	);
 }
