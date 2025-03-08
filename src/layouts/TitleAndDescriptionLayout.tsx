@@ -30,7 +30,7 @@ export const TitleAndDescriptionLayout = ({
 						</span>
 					</h2>
 					<div className="flex justify-center my-5">
-						<p className="w-11/12 md:w-2/3 lg:w-2/4 text-xl md:text-3xl lg:text-xl font-normal text-center dark:text-slate-200">
+						<p className="w-full lg:w-2/4 text-xl md:text-3xl lg:text-xl font-normal text-center dark:text-slate-200">
 							{description}
 						</p>
 					</div>

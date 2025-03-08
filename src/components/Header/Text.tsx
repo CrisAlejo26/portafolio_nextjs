@@ -35,11 +35,9 @@ export const Text = () => {
 							<h1 className="text-[#182848] dark:text-slate-200 font-bold text-4xl md:text-6xl lg:text-5xl flex flex-col">
 								<span className="mb-3">Soy Cristian</span>
 								<span className="bg-clip-text text-transparent text-5xl md:text-7xl custom-text-gradient">
-									Desarrollador Web
+									Desarrollador Web <br /> Especialista en IA
 								</span>
-								<span className="bg-clip-text text-transparent text-5xl md:text-7xl custom-text-gradient py-3">
-									Especialista en IA
-								</span>
+								<span className="bg-clip-text text-transparent text-5xl md:text-7xl custom-text-gradient py-3"></span>
 							</h1>
 							<h2 className="w-11/12 md:w-2/3 lg:w-2/5 text-xl md:text-3xl lg:text-xl font-normal">
 								Desarrollo cada <strong>página web</strong> con tecnología moderna y

@@ -1,18 +1,6 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
 import { ThemeProvider, ThemeToggleButton } from '@/components';
 import './globals.css';
-
-const geistSans = localFont({
-	src: './fonts/GeistVF.woff',
-	variable: '--font-geist-sans',
-	weight: '100 900',
-});
-const geistMono = localFont({
-	src: './fonts/GeistMonoVF.woff',
-	variable: '--font-geist-mono',
-	weight: '100 900',
-});
 
 export const metadata: Metadata = {
 	title: 'Cristian Code | Portfolio de Cristian Alejandro Arroyave',
@@ -71,7 +59,7 @@ export default function RootLayout({
 			lang="es"
 			suppressHydrationWarning
 			className="overflow-y-scroll dark:bg-black scrollbar-thin scrollbar-thumb-sky-700 scrollbar-track-sky-400 dark:scrollbar-thumb-blue-950 dark:scrollbar-track-blue-700">
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+			<body className={`antialiased`}>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="light"

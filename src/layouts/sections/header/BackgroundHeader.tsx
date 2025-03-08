@@ -1,5 +1,7 @@
+import { ReactNode } from 'react';
+
 interface BackgroundHeaderProps {
-	children: React.ReactNode;
+	children: ReactNode;
 }
 
 export const BackgroundHeaderLayout = ({ children }: BackgroundHeaderProps) => {

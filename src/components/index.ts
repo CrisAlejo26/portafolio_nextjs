@@ -3,6 +3,7 @@ export * from './Header';
 export * from './Services';
 export * from './Works';
 export * from './Blogs';
+export * from './Contact';
 export { default as Navbar } from './Navbar/Navbar';
 export { ThemeProvider } from './Theme-provider';
 export { ModeToggle } from './ToogleModeDark';

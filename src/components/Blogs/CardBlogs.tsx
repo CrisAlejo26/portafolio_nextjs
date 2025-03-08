@@ -14,7 +14,7 @@ const FadeInSection = dynamic(
 export const CardBlogs = ({ title, description, image, date, info }: CardBlogI) => {
 	return (
 		<FadeInSection>
-			<section className="group bg-transparent w-80 h-96 p-4 perspective-[1000px] font-sans cursor-pointer">
+			<section className="group bg-transparent w-80 h-96 p-4 perspective-[1000px] font-sans cursor-pointer justify-self-center">
 				<div className="relative w-full h-full  transition-all [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] duration-500 ease-in-out">
 					{/* Cara frontal */}
 					<div className="absolute flex flex-col text-center justify-center w-full h-full [backface-visibility:hidden] shadow-[0_8px_14px_0_rgba(0,0,0,0.2)] border rounded-xl border-indigo-200 bg-gradient-to-br from-blue-300 via-blue-50 to-blue-300 text-indigo-600 dark:border-indigo-700 dark:bg-gradient-to-br dark:from-blue-800 dark:via-blue-500 dark:to-indigo-800 dark:text-indigo-50 ">

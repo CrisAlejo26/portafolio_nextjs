@@ -39,7 +39,7 @@ const dataCarousel: CarouselI[] = [
 		description:
 			'Demostró su agilidad en el aprendizaje de cada tarea que le fue encomendada y la realizó de la mejor forma',
 		name: 'Sebastián Delgado',
-		post: 'Jefe en Sitemas de Cinde',
+		post: 'Jefe en Sistemas de Cinde',
 		image: sebastian,
 	},
 ];
@@ -50,7 +50,7 @@ export function CarouselPlugin() {
 	return (
 		<Carousel
 			plugins={[plugin.current]}
-			className="max-w-sm md:max-w-md"
+			className="max-w-72 md:max-w-md"
 			onMouseEnter={plugin.current.stop}
 			onMouseLeave={plugin.current.reset}>
 			<CarouselContent>

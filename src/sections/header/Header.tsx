@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+
 const BackgroundHeaderLayout = dynamic(
 	() => import('../../layouts').then(module => ({ default: module.BackgroundHeaderLayout })),
 	{

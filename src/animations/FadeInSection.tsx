@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useRef } from 'react';
+import { ReactNode, useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
 
 export interface AnimatedSectionProps {
 	/** Contenido a renderizar */
-	children: React.ReactNode;
+	children: ReactNode;
 	/** Duración de la animación en segundos (default: 0.5) */
 	duration?: number;
 	/** Dirección desde la que entra el contenido: 'up' (default), 'down', 'left' o 'right' */

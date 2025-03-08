@@ -19,6 +19,9 @@ const History = dynamic(() => import('../sections').then(module => ({ default: m
 const Blogs = dynamic(() => import('../sections').then(module => ({ default: module.Blogs })), {
 	ssr: false,
 });
+const Contact = dynamic(() => import('../sections').then(module => ({ default: module.Contact })), {
+	ssr: false,
+});
 
 export default function Home() {
 	return (
@@ -31,6 +34,7 @@ export default function Home() {
 			</main>
 			<History />
 			<Blogs />
+			<Contact />
 		</section>
 	);
 }
