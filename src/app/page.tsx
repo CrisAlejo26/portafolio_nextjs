@@ -1,19 +1,23 @@
 import dynamic from 'next/dynamic';
 
 const Header = dynamic(() => import('../sections').then(module => ({ default: module.Header })), {
-	loading: () => <p>Cargando...</p>,
+	ssr: false,
 });
 const Navbar = dynamic(() => import('../components').then(module => ({ default: module.Navbar })), {
-	loading: () => <p>Cargando...</p>,
+	ssr: false,
 });
 const Services = dynamic(
 	() => import('../sections').then(module => ({ default: module.Services })),
-	{
-		loading: () => <p>Cargando...</p>,
-	},
+	{ ssr: false },
 );
 const Works = dynamic(() => import('../sections').then(module => ({ default: module.Works })), {
-	loading: () => <p>Cargando...</p>,
+	ssr: false,
+});
+const History = dynamic(() => import('../sections').then(module => ({ default: module.History })), {
+	ssr: false,
+});
+const Blogs = dynamic(() => import('../sections').then(module => ({ default: module.Blogs })), {
+	ssr: false,
 });
 
 export default function Home() {
@@ -25,6 +29,8 @@ export default function Home() {
 				<Services />
 				<Works />
 			</main>
+			<History />
+			<Blogs />
 		</section>
 	);
 }

@@ -17,3 +17,12 @@ export {
 	DropdownMenuSubTrigger,
 	DropdownMenuSubContent,
 } from './Dropdown-menu';
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from './Card';
+export {
+	type CarouselApi,
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselPrevious,
+	CarouselNext,
+} from './Carousel';

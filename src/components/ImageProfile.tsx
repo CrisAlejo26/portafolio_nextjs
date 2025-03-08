@@ -8,7 +8,7 @@ import { profileImage } from '@/assets';
 export const ImageProfile: React.FC = () => {
 	return (
 		<motion.div
-			className="relative w-80 h-80 md:w-[25rem] md:h-[25rem] lg:w-72 lg:h-72 xl:w-96 xl:h-96 overflow-hidden rounded-xl"
+			className="relative w-72 h-72 md:w-[25rem] md:h-[25rem] lg:w-72 lg:h-72 xl:w-96 xl:h-96 overflow-hidden rounded-xl"
 			initial={{ rotate: 5, borderColor: 'rgba(0,0,0,0)' }}
 			whileHover={{ rotate: 0, borderColor: 'rgba(138,43,226,1)' }}
 			transition={{ duration: 0.3 }}

@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 	keywords: [
 		'Cristian Code',
 		'Cristian Alejandro Arroyave',
-		'NestJS',
-		'Node',
+		'Pagina web',
+		'IA',
 		'TypeScript',
 		'Next.js',
 		'Python',
@@ -70,7 +70,7 @@ export default function RootLayout({
 		<html
 			lang="es"
 			suppressHydrationWarning
-			className="overflow-y-scroll scrollbar-thin scrollbar-thumb-sky-700 scrollbar-track-sky-400 dark:scrollbar-thumb-blue-950 dark:scrollbar-track-blue-700">
+			className="overflow-y-scroll dark:bg-black scrollbar-thin scrollbar-thumb-sky-700 scrollbar-track-sky-400 dark:scrollbar-thumb-blue-950 dark:scrollbar-track-blue-700">
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 				<ThemeProvider
 					attribute="class"

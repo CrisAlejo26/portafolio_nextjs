@@ -2,7 +2,7 @@ import { autofillai, calicer, cardioIns, carrent } from '@/assets';
 import { CardWorkI } from '@/interfaces';
 import dynamic from 'next/dynamic';
 
-const Card = dynamic(() => import('./Card').then(module => ({ default: module.Card })), {
+const Card = dynamic(() => import('./Card').then(module => ({ default: module.CardWork })), {
 	loading: () => <p>Cargando...</p>,
 });
 

@@ -17,7 +17,7 @@ export const Services = () => {
 	return (
 		<TitleAndDescriptionLayout
 			className="bg-purple-100 dark:bg-slate-900"
-			title=" Nuestos servicios"
+			title=" Nuestros servicios"
 			description="Transformamos tus ideas en experiencias digitales únicas. Desde el diseño de
 						páginas web hasta el desarrollo de sistemas personalizados, creamos
 						soluciones atractivas y funcionales que impulsan tu negocio e inspiran a tus

@@ -1,0 +1,1 @@
+export { CardsBlogs } from './CardsBlogs';
