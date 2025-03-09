@@ -1,6 +1,6 @@
 import logoLight from './images/logo_positivo.webp';
 import logoDark from './images/logo_negativo.webp';
-import profileImage from './images/profile.webp';
+import profileImage from './images/profile.avif';
 import cardioIns from './images/projects/cardioins.webp';
 import calicer from './images/projects/calicer.webp';
 import autofillai from './images/projects/autofillai.webp';

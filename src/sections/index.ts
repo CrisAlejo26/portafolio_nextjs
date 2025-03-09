@@ -4,3 +4,4 @@ export { Works } from './works/Works';
 export { History } from './history/History';
 export { Blogs } from './blogs/Blogs';
 export { Contact } from './contact/Contact';
+export { Footer } from './footer/Footer';

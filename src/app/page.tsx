@@ -22,6 +22,9 @@ const Blogs = dynamic(() => import('../sections').then(module => ({ default: mod
 const Contact = dynamic(() => import('../sections').then(module => ({ default: module.Contact })), {
 	ssr: false,
 });
+const Footer = dynamic(() => import('../sections').then(module => ({ default: module.Footer })), {
+	ssr: false,
+});
 
 export default function Home() {
 	return (
@@ -35,6 +38,7 @@ export default function Home() {
 			<History />
 			<Blogs />
 			<Contact />
+			<Footer />
 		</section>
 	);
 }

@@ -1,11 +1,29 @@
 'use client';
-import React, { useState } from 'react';
-import { Logo } from '../Logo';
 import { useIsMobile } from '@/hooks';
+import dynamic from 'next/dynamic';
+import { useState } from 'react';
 import Link from 'next/link';
-import { DesktopMenu } from './DesktopMenu';
-import { HamburgerButton } from './HamburgerButton';
-import { MobileMenu } from './MobileMenu';
+const Logo = dynamic(() => import('../Logo').then(module => ({ default: module.Logo })), {
+	ssr: false,
+});
+const DesktopMenu = dynamic(
+	() => import('./DesktopMenu').then(module => ({ default: module.DesktopMenu })),
+	{
+		ssr: false,
+	},
+);
+const HamburgerButton = dynamic(
+	() => import('./HamburgerButton').then(module => ({ default: module.HamburgerButton })),
+	{
+		ssr: false,
+	},
+);
+const MobileMenu = dynamic(
+	() => import('./MobileMenu').then(module => ({ default: module.MobileMenu })),
+	{
+		ssr: false,
+	},
+);
 
 export default function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false);
