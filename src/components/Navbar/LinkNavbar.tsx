@@ -11,16 +11,12 @@ const links: Links[] = [
 		href: '/service',
 	},
 	{
-		label: 'Resumen',
-		href: '/about',
-	},
-	{
 		label: 'Proyectos',
 		href: '/project',
 	},
 	{
-		label: 'Habilidades',
-		href: '/skill',
+		label: 'Blogs',
+		href: '/blog',
 	},
 	{
 		label: 'Testimonios',

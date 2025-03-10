@@ -9,6 +9,7 @@ import alejandro from './images/testimonials/alejandro.webp';
 import gina from './images/testimonials/gina.webp';
 import sebastian from './images/testimonials/sebastian.webp';
 import blog_1 from './images/blogs/blog_1.webp';
+import develop_web from './images/services/develop_web.webp';
 
 export {
 	logoLight,
@@ -22,4 +23,5 @@ export {
 	gina,
 	sebastian,
 	blog_1,
+	develop_web,
 };

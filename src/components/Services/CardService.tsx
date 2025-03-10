@@ -2,29 +2,33 @@
 import { useIsMobile } from '@/hooks';
 import { CardServiceI } from '@/interfaces';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 const FadeInSection = dynamic(
 	() => import('../../animations').then(module => ({ default: module.FadeInSection })),
 	{
-		loading: () => <p>Cargando...</p>,
+		ssr: false,
 	},
 );
 
 const JetIcon = dynamic(
 	() => import('../../animations').then(module => ({ default: module.JetIcon })),
 	{
-		loading: () => <p>Cargando...</p>,
+		ssr: false,
 	},
 );
 
-export const CardService = ({ num, title, description }: CardServiceI) => {
+export const CardService = ({ num, title, description, path }: CardServiceI) => {
 	const [activeAnimation, setActiveAnimation] = useState<boolean>(false);
 	const isMobile = useIsMobile();
+	const router = useRouter();
+
 	return (
 		<FadeInSection>
 			<div
 				className="dark:text-slate-200 grid lg:grid-cols-12 md:grid-cols-1 gap-5 place-items-center  cursor-pointer hover:bg-[linear-gradient(to_right,_#854ff3_0%,_#182848_51%,_#4b6cb7_100%)] py-10 px-5 transition-all duration-300 ease-in-out"
+				onClick={() => router.push(path)}
 				onMouseOver={() => setActiveAnimation(true)}
 				onMouseOut={() => setActiveAnimation(false)}>
 				<div className="flex gap-5 lg:col-span-5 place-self-start ">
