@@ -1,6 +1,14 @@
 import type { Metadata } from 'next';
 import { ThemeProvider, ThemeToggleButton } from '@/components';
+import dynamic from 'next/dynamic';
 import './globals.css';
+
+const WhatsAppButton = dynamic(
+	() => import('@/components/WhatsAppButton').then(module => ({ default: module.WhatsAppButton })),
+	{
+		ssr: false,
+	},
+);
 
 export const metadata: Metadata = {
 	title: 'Cristian Code | Portfolio de Cristian Alejandro Arroyave',
@@ -67,6 +75,7 @@ export default function RootLayout({
 					disableTransitionOnChange>
 					{children}
 					<ThemeToggleButton />
+					<WhatsAppButton />
 				</ThemeProvider>
 			</body>
 		</html>

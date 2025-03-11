@@ -46,8 +46,8 @@ export const Footer = () => {
 								))}
 							</ul>
 						</div>
-						<p className="dark:text-gray-500">
-							© 2025 Todos los derechos reservados por{' '}
+						<p className="dark:text-gray-500 text-center md:text-start">
+							&copy; 2025 Todos los derechos reservados por{' '}
 							<span className="bg-clip-text text-transparent bg-[linear-gradient(to_right,_#854ff3_0%,_#182848_51%,_#4b6cb7_100%)] dark:bg-[linear-gradient(to_right,_#00d2ff_0%,_#3a7bd5_51%,_#00d2ff_100%)] font-bold">
 								Cristian Alejandro Arroyave
 							</span>

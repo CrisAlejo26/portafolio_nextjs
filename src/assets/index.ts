@@ -10,6 +10,7 @@ import gina from './images/testimonials/gina.webp';
 import sebastian from './images/testimonials/sebastian.webp';
 import blog_1 from './images/blogs/blog_1.webp';
 import develop_web from './images/services/develop_web.webp';
+import messageSvg from './images/contact-illustration.svg';
 
 export {
 	logoLight,
@@ -24,4 +25,5 @@ export {
 	sebastian,
 	blog_1,
 	develop_web,
+	messageSvg,
 };
